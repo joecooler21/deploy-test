@@ -16,6 +16,10 @@
   caret-color: transparent;
 }
 
+img:hover {
+  cursor:pointer;
+}
+
 ul {
   padding-left:0px;
 }

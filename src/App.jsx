@@ -1,10 +1,14 @@
 
 import './App.css'
 import { FaGithub, FaEnvelope, FaQuestion } from 'react-icons/fa'
+import { useState } from 'react'
 
 function App() {
 
+  const [about, setAbout] = useState(false)
+
   const aboutClick = () => {
+    about ? setAbout(false) : setAbout(true)
   }
 
   const gitHubClick = () => {
@@ -44,14 +48,18 @@ function App() {
 
   return (
     <>
-      <img src='/avataaars.svg' />
+      <a href='http://coolweb.dev'><img src='/avataaars.svg' /></a>
       <h2>Joseph Cooler</h2>
       <p>Full Stack React Developer<br></br>
         Wisconsin, USA</p>
       {menu.map((e, index) => {
         return <button key={index} onClick={e.handler} style={buttonStyles}>{e.icon}<div>{e.text}</div></button>
       })}
-        <p>Stuff I've learned, used and made</p>
+
+      <div>
+        {about ? <p style={{maxWidth:'500px'}}>Hi friends! My name is Joseph and I'm a full stack web developer.
+           Well actually, my friends call me Joe. Only my mother calls me Joseph. When she's mad at me. I was born in Florida, grew up in Georgia and now live in Wisconsin where I completed a full stack coding bootcamp from the University of Wisconsin and now work at a postal software company.<br></br><br></br>When I'm not working on coding projects, I spend most of my free time working out, gaming and playing guitar.</p>:<div>
+        <p>Stuff I've learned, used and made. </p>
 
         <div style={{display:'flex'}}>
 
@@ -81,7 +89,9 @@ function App() {
             })}
           </ul>
         </div>
+        </div>
 
+      </div>}
       </div>
     </>
   )
