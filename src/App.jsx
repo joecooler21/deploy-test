@@ -29,7 +29,7 @@ function App() {
 
   const frontend = ['HTML', 'CSS', 'Javascript', 'React', 'Material UI']
   const backend = ['MongoDB', 'Express', 'Node.js']
-  const projects = ['Scheduler', 'Audio Looper', 'Bug Tracker']
+  const projects = ['Scheduler', 'Audio Looper']
 
   const buttonStyles = {
     marginRight: '5px'
